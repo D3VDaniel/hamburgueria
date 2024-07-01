@@ -13,10 +13,17 @@
     border: none;
     text-decoration: none;
     transition: 0.2s linear;
+    font-family: "Roboto", sans-serif;
 }
 
 body {
     background-color: var(--bg);
+}
+
+section {
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 .header {
@@ -28,3 +35,48 @@ body {
     border-bottom: var(--border);
 }
 
+.header .logo img {
+    width: 80px;
+    height: 80px;
+}
+
+.icons img {
+    width: 30px;
+    height: 30px;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.icons img:hover {
+    width: 40px;
+    height: 40px;
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.navbar a {
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+    border-bottom: 0.1rem solid var(--main-color);
+    padding-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+#carousel-imagens {
+    background-color: red;
+}
+
+#carousel-imagens img {
+    height: 100vh;
+}
