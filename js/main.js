@@ -10,6 +10,8 @@ $(document).ready(function(){
 
     $('#Telefone').mask('(00) 00000-0000')
 
+    $('#cep').mask('00000-000')
+
     $('form').validate({
         rules: {
             nome: {
@@ -25,15 +27,15 @@ $(document).ready(function(){
             mensagem: {
                 required: true
             },
-            veiculoDeInteresse: {
-                required: false,
+            cep: {
+                required: true,
             }
         },
         messages: {
             nome: 'Por favor, insira o seu nome'
         },
         submitHandler: function(form) {
-            alert("Sua requisição foi enviada para análise, parabéns pela aquisição!");
+            alert("Seu pedido está sendo preparado. Ele chegará em breve!");
             form.reset();
         },
         invalidHandler: function(form, validador) {
@@ -44,11 +46,11 @@ $(document).ready(function(){
         }
     })
 
-    $('.lista-veiculos button').click(function() {
-        const destino = $('#contato');
-        const nomeVeiculo = $(this).parent().find('h3').text();
+    $('.list button').click(function() {
+        const destino = $('#Mensagem');
+        const nomeVeiculo = $(this).parent().find('.hbg-name').text();
 
-        $('#veiculo-interesse').val(nomeVeiculo);
+        $('#Mensagem').val(nomeVeiculo);
 
         $('html').animate({
             scrollTop: destino.offset().top

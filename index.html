@@ -21,8 +21,8 @@
             </a>
             <nav class="navbar">
                 <a href="#">Home</a>
-                <a href="#about">Sobre</a>
-                <a href="#menu">Menu</a>
+                <a href="#">Sobre</a>
+                <a href="#">Menu</a>
             </nav>
             <div class="icons">
                 <img src="./images/icons8-pesquisar-50.png" alt="search" />
@@ -44,8 +44,9 @@
         </div>
     </section>
     <section class="menu-hamburguer">
+        <img class="fundo" src="./images-2/vetor-menu.png" />
         <div class="recomendados">
-            <h2>RECOMENDADOS</h2>
+            <h2 class="rec">RECOMENDADOS</h2>
         </div>
         <div class="list">
             <div class="item active">
@@ -54,10 +55,10 @@
                 </div>
                 <div class="content">
                     <h2 class="hbg-name">
-                        DECK Simples
+                        DECK Bacon
                     </h2>
                     <p class="description">
-                        Pão Americano, Hamburguer 120g, Salada e Molho Especial.
+                        Pão Americano, Hamburguer 180g, Bacon e Salada.
                     </p>
                     <button class="information">
                         PEDIR!
@@ -65,27 +66,57 @@
                 </div>
             </div>
 
-            <div class="item active">
+            <div class="item">
                 <div class="hbg-img">
-                    <img src="./images-2/simples.png">
+                    <img src="./images-2/cheedar.png">
                 </div>
                 <div class="content">
                     <h2 class="hbg-name">
-                        DECK Simples
+                        DECK Cheddar
                     </h2>
                     <p class="description">
-                        Pão Americano, Hamburguer 120g, Salada e Molho Especial.
+                        Pão Americano, Hamburguer 120g, Cheddar e Salada.
                     </p>
                     <button class="information">
                         PEDIR!
                     </button>
                 </div>
             </div>
-            
+
+            <div class="item">
+                <div class="hbg-img">
+                    <img src="./images-2/duplo.png">
+                </div>
+                <div class="content">
+                    <h2 class="hbg-name">
+                        DECK Duplo
+                    </h2>
+                    <p class="description">
+                        Pão Americano, dois Hamburguers 120g, Cheddar e Salada.
+                    </p>
+                    <button class="information">
+                        PEDIR!
+                    </button>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="hbg-img">
+                    <img src="./images-2/smash.png">
+                </div>
+                <div class="content">
+                    <h2 class="hbg-name">
+                        DECK Smash
+                    </h2>
+                    <p class="description">
+                        Pão Americano, Hamburguer 180g, Salada do Chef.
+                    </p>
+                    <button class="information">
+                        PEDIR!
+                    </button>
+                </div>
+            </div>
     </section>
-
-
-
 
     <section class="media">
         <div class="form">
@@ -103,18 +134,24 @@
                     <input type="email" id="email" name="email">
                 </div>
                 <div class="form-campo">
-                    <label for="veiculo-interesse">Veículo de Interesse:</label>
-                    <input type="text" id="veiculo-interesse" name="veiculoDeInteresse">
+                    <label for="cep">CEP:</label>
+                    <input type="cep" id="cep" name="cep">
                 </div>
                 <div class="form-campo">
-                    <label for="Mensagem">Mensagem:</label>
+                    <label for="Mensagem">Pedido:</label>
                     <textarea id="Mensagem" name="mensagem"></textarea>
                 </div>
                 <button type="submit">Enviar</button>
             </form>
         </div>
     </section>
-    </section>
+    <footer>
+        <div class="bottom">
+            <p>
+                &copy; Desenvolvido por <a href="https://github.com/D3VDaniel">Daniel Araújo</a> - Todos os Direitos Reservados - 2024
+            </p>
+        </div>
+    </footer>
 
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>

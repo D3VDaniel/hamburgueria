@@ -4,7 +4,7 @@
     --bg: #010103;
     --border: 0.1rem solid rgba(255,255,255,0.3);
     font-size: 10px;
-    overflow: ;
+    overflow-x: hidden;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -14,9 +14,9 @@
     outline: none;
     border: none;
     text-decoration: none;
-    transition: 0.2s linear;
+    transition: ;
     font-family: "Roboto", sans-serif;
-    
+    transition: 0.2s linear;
 }
 
 body {
@@ -69,16 +69,17 @@ body {
 
 .navbar a {
     margin: 0 1rem;
-    font-size: 3rem;
+    font-size: 2rem;
     color: #ea580c;
     font-weight: bold;
+    z-index: 99;
 }
 
 .navbar a:hover {
     color: var(--main-color);
     border-bottom: 0.1rem solid var(--main-color);
     padding-bottom: 0.5rem;
-    font-size: 4rem;
+    font-size: 2.5rem;
 }
 
 .carousel {
@@ -134,7 +135,7 @@ body {
     font-size: 28px;
     font-weight: 100;
     letter-spacing: 2px;
-    margin-top: 40px;
+    margin-top: 10px;
 }
 
 /*CONTEUDO HOVER*/
@@ -151,58 +152,77 @@ body {
     font-weight: bold;
     letter-spacing: 5px;
     color: #ea580c;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .conteudo h4:hover {
     font-size: 30px;
     font-weight: 100;
     letter-spacing: 2px;
-    margin-top: 40px;
     color: #ea580c;
 }
 
 /* MENU DE HAMBURGUERES */
 
 .menu-hamburguer {
-    background-color: yellow;
-    display: block;
-    margin-left: 17rem;
+    background-color: ;
+    display: grid;
+    max-width: 100vw;
+    max-height: 600px;
     margin-top: 60px;
-    max-width: 1200px;
-    height: 400px;
+    z-index: 0;
+}
+
+.menu-hamburguer .fundo {
+    display: grid;
+    height: 100%;
+    width: 100vw;
+    z-index: 1;
 }
 
 .recomendados {
-    background-color: red;
-    display: flex;
+    background-color:;
+    display: grid;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 40px;
-    font-size: 18px;
+    top: 80%;
+    position: absolute;
+}
+
+.recomendados .rec {
+    font-size: 28px;
     color: #fff;
+    z-index: 98;
+}
+.recomendados .rec:hover {
+    font-size: 32px;
+    color: black;
+    text-shadow: 1px 1px #ea580c;
+    z-index: 99;
 }
 
 .menu-hamburguer .list {
-    width: 100%;
-    height: 90%;
-    overflow: hidden;
+    max-width: 1200px;
+    left: 17rem;
+    width: 90%;
+    height: 80%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    flex-direction: ;
     align-items: center;
-    
-}
-
-.menu-hamburguer .list .active {
-    background-color: green;
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    height: 90%;
+    position: absolute;
+    top: 80%;
+    z-index: 90;
     justify-self: center;
     justify-content: center;
+}
+
+.list .item {
+    display: flex;
     align-items: center;
+    justify-self: center;
+    justify-content: center;
 }
 
 .menu-hamburguer .list img {
@@ -210,44 +230,105 @@ body {
     width: 200px;
     height: 200px;
 }
-
-.active .content {
-    display: flex;
-    flex-direction: column;
-    
+.menu-hamburguer .list img:hover {
+    width: 230px;
+    height: 230px;
 }
 
-.active .hbg-img {
+.content {
+    display: flex;
+    flex-direction: ;
+    align-items: start;
+    text-align: start;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.hbg-img {
     justify-content: center;
     align-items: center;
+    z-index: 91;
+}
+
+.content h2 {
+    color: #fff;
+    font-size: 32px;
+}
+.content h2:hover {
+    font-size: 36px;
+    text-shadow: 1px 1px #ea580c;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: black;
+}
+
+.content .description {
+    color: #fff;
+    font-size: 24px;
+    align-items: center;
+    margin-top: 4px;
+    padding: 4px 0;
+    z-index: 91;
+    
+}
+.content .description:hover {
+    font-size: 26px;
+    text-shadow: 1px 1px #ea580c;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: black;
+}
+
+.content .information {
+    background-color: white;
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+    margin-top: 8px;
+    color: #ea580c;
+    font-weight: bold;
+    cursor: pointer;
+    border-style: ridge;
+    border-color: #ea580c;
+}
+.content .information:hover {
+    background-color: #ea580c;
+    width: 220px;
+    height: 35px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 /* FORMULÁRIO */
 
 .media {
-    background-color: red;
     display: flex;
-    position: ;
     margin-left: 17rem;
-    margin-top: 60px;
+    margin-top: 100px;
     max-width: 1200px;
-    height: 400px;
+    height: 500px;
     z-index: 99; 
 }
 
 .form {
-    width: 400px; 
+    width: 1200px; 
+    display: flex;
+    align-items: center;    
 }
 
 form {
-    background-color: blue;
+    display: grid;
+    background-image: linear-gradient(-90deg, transparent, #ea580c 200%);
+    border-radius: 20px;
 }
 
 .form-campo {
-    padding: 0 3rem;
-    width: 400px;
-    font-size: 12px;
-    margin-bottom: 16px;
+    padding: 1rem 2rem;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    color: #fff;
 }
 
 .form-campo label {
@@ -258,11 +339,67 @@ form {
 .form-campo input {
     width: 300px;
     height: 30px;
+    border-radius: 12px;
+    color: #ea580c;
+    font-weight: bold;
+    font-size: 16px;
+    border-style: ridge;
+    border-color: #ea580c;
 }
 
 .form-campo textarea {
     resize: none;
     width: 300px;
     height: 80px;
+    border-radius: 12px;
+    border-style: ridge;
+    border-color: #ea580c;
+    color: #ea580c;
 }
 
+.form button {
+    padding: 1rem 2rem;
+    align-self: center;
+    justify-self: center;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    width: 88%;
+    font-weight: bold;
+    font-size: 16px;
+    color:#ea580c;
+    background-color: #fff;
+    border-style: ridge;
+    border-color: #ea580c;
+}
+
+.form button:hover {
+    background-color: #ea580c;
+    color: #fff;
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(180deg, transparent, black 50%);
+    color: black;
+    text-decoration: none;
+}
+
+footer .bottom {
+    font-size: 16px;
+}
+
+footer .bottom p {
+    color: #fff;
+}
+
+footer .bottom p a {
+    text-decoration: none;
+    color: #ea580c;
+}
