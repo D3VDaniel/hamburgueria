@@ -14,7 +14,6 @@
     outline: none;
     border: none;
     text-decoration: none;
-    transition: ;
     font-family: "Roboto", sans-serif;
     transition: 0.2s linear;
 }
@@ -90,7 +89,6 @@ body {
     justify-content: space-between;
     top: 10px;
     padding: 0 14rem;
-    background-color: ;
     width: 1200px;
     height: 300px;
 }
@@ -164,7 +162,6 @@ body {
 /* MENU DE HAMBURGUERES */
 
 .menu-hamburguer {
-    background-color: ;
     display: grid;
     max-width: 100vw;
     max-height: 600px;
@@ -180,7 +177,6 @@ body {
 }
 
 .recomendados {
-    background-color:;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -191,38 +187,38 @@ body {
 }
 
 .recomendados .rec {
-    font-size: 28px;
+    font-size: 38px;
     color: #fff;
     z-index: 98;
+    letter-spacing: 8px;
 }
 .recomendados .rec:hover {
-    font-size: 32px;
+    font-size: 42px;
     color: black;
     text-shadow: 1px 1px #ea580c;
     z-index: 99;
 }
 
 .menu-hamburguer .list {
-    max-width: 1200px;
-    left: 17rem;
+    padding: 0 11rem;
+    max-width: 90vw;
     width: 90%;
     height: 80%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    flex-direction: ;
+    display: flex;
     align-items: center;
     position: absolute;
     top: 80%;
     z-index: 90;
-    justify-self: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .list .item {
-    display: flex;
+    display: block;
     align-items: center;
     justify-self: center;
-    justify-content: center;
+    justify-content: space-between;
+    height: 50%;
+    max-width: 30%;
 }
 
 .menu-hamburguer .list img {
@@ -236,8 +232,7 @@ body {
 }
 
 .content {
-    display: flex;
-    flex-direction: ;
+    display: inline-block;
     align-items: start;
     text-align: start;
     flex-wrap: wrap;
@@ -269,7 +264,6 @@ body {
     margin-top: 4px;
     padding: 4px 0;
     z-index: 91;
-    
 }
 .content .description:hover {
     font-size: 26px;
@@ -290,6 +284,7 @@ body {
     cursor: pointer;
     border-style: ridge;
     border-color: #ea580c;
+    position: relative;
 }
 .content .information:hover {
     background-color: #ea580c;
@@ -403,3 +398,39 @@ footer .bottom p a {
     text-decoration: none;
     color: #ea580c;
 }
+
+
+@media screen and (max-width: 767px) {
+    .header {
+        display: block;
+    }
+
+    .navbar {
+        display: flex;
+    }
+
+    .carousel {
+        display: block;
+        overflow-y: hidden;
+        max-width: 90%;
+        padding: 0;
+    }
+
+    #carousel-imagens {
+        display: none;
+    }
+
+    .conteudo h3 {
+        font-size: 28px;
+    }
+
+    .conteudo h2 {
+        font-size: 32px;
+    }
+
+    .conteudo h4 {
+        font-size: 18px;
+    }
+
+}
+
